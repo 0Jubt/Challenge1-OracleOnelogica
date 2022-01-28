@@ -33,17 +33,17 @@ let msj_Visible = "¡Mensaje desencriptado!"
 
 
 const vocalesAEncriptar = {
-  a:"ai",
   e:"enter",
   i:"imes",
+  a:"ai",
   o:"ober",
   u:"ufat"
 };
 
 const vocalesADesencriptar = {
-    ai:"a",
     enter:"e",
     imes:"i",
+    ai:"a",    
     ober:"o",
     ufat:"u"
 };
@@ -71,7 +71,8 @@ function encriptarTexto(){
    
 function desencriptarTexto(){
     texto_Salida.value = texto_Entrada.value.replace(/ai|enter|imes|ober|ufat/g,function (frase) {
-    alert(msj_Visible);    
+    alert(msj_Visible);
+    vocalesADesencriptar++;      
     return vocalesADesencriptar[frase];
     
 });
